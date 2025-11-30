@@ -1,0 +1,72 @@
+
+<form [formGroup]="formulario" (ngSubmit)="mostrar()">
+    <h1 class="titulo">Formulario de Inscripción</h1>
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+         <input matInput id="nombre" formControlName="nombre">
+    </mat-form-field>
+
+    @if(formulario.controls['nombre'].touched){
+        <small>
+            <div class="mensajeError">
+                @if(formulario.controls['nombre'].hasError('required')){El campo nombre es obligatorio}
+            </div>
+        </small>
+    }
+
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+         <input matInput id="email" formControlName="email" type="email">
+    </mat-form-field>
+
+    @if(formulario.controls['email'].touched){
+        <small>
+            <div class="mensajeError">
+                @if(formulario.controls['email'].hasError('required')){El campo email es obligatorio}
+                @if(formulario.controls['email'].hasError('email')){Por favor introduzca un email válido}
+            </div>
+        </small>
+    }   
+
+    <mat-form-field>
+        <mat-label>Edad</mat-label>
+         <input matInput id="edad" formControlName="edad" type="number">
+    </mat-form-field>
+
+    @if(formulario.controls['edad'].touched){
+        <small>
+            <div class="mensajeError">
+                @if(formulario.controls['edad'].hasError('required')){El campo edad es obligatorio}
+            </div>
+        </small>
+    }
+
+    <mat-form-field>
+        <mat-label>Pais</mat-label>
+
+        <mat-select formControlName="pais">
+            <mat-option value="España">España</mat-option>
+            <mat-option value="Portugal">Portugal</mat-option>
+            <mat-option value="Francia">Francia</mat-option>
+            <mat-option value="Suazilandia">Suazilandia</mat-option>
+            <mat-option value="Nuevo Zanzíbar">Pepsi presenta: Nuevo Zanzíbar</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    @if(formulario.controls['pais'].touched){
+        <small>
+            <div class="mensajeError">
+                @if(formulario.controls['pais'].hasError('required')){Por favor, seleccione su país}
+            </div>
+        </small>
+    }
+
+    <mat-checkbox formControlName="aceptaCondiciones">Acepto las condiciones y términos del servicio</mat-checkbox>
+
+    <mat-form-field>
+        <mat-label>Mensaje</mat-label>
+        <textarea matInput formControlName="comentario"></textarea>
+    </mat-form-field>
+
+    <button type="submit">Enviar</button>
+</form>

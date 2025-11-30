@@ -1,0 +1,23 @@
+<mat-toolbar class="fondo">
+  <span class="example-spacer opcion2" routerLink="/contador">Contador</span>
+  <span class="example-spacer opcion2" routerLink="/matatopos">Matatopos</span>
+  <span class="example-spacer opcion2" routerLink="/kanban">Kanban</span>
+  <span class="example-spacer opcion2" routerLink="/eye-candy">Eye Candy</span>
+  <span class="example-spacer opcion2" routerLink="/carrera">Carrera</span>
+  <span class="example-spacer opcion2" routerLink="/Personajes/lista-personajes">Personajes</span>
+  <span class="example-spacer opcion2" routerLink="/formulario">Formulario</span>
+
+  <button matIconButton class="example-icon opcion1 colorMenu" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/contador">Contador</button>
+    <button mat-menu-item routerLink="/matatopos">Matatopos</button>
+    <button mat-menu-item routerLink="/kanban">Kanban</button>
+    <button mat-menu-item routerLink="/eye-candy">Eye Candy</button>
+    <button mat-menu-item routerLink="/carrera">Carrera</button>
+    <button mat-menu-item routerLink="/Personajes/lista-personajes">Personajes</button>
+    <button mat-menu-item routerLink="/formulario">Formulario</button>
+  </mat-menu> 
+  <span class="opcion"><mat-slide-toggle (click)="changeBackground()"></mat-slide-toggle></span> 
+</mat-toolbar>

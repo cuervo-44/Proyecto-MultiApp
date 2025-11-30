@@ -1,0 +1,88 @@
+.general {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    animation: epilepsia 2s infinite, agrandar 5s infinite, moverX 15s infinite;
+}
+
+@keyframes epilepsia {
+    0% {
+        background-color: blue;
+
+    }
+    10% {
+        background-color: red
+    }
+    20% {
+        background-color: gold;
+    }
+    30% {
+        background-color: violet;
+    }
+    40% {
+        background-color: green;
+    }
+    50% {
+        background-color: aqua;
+    }
+    60% {
+        background-color: black;
+    }
+    70% {
+        background-color: rebeccapurple;
+    }
+    80% {
+        background-color: burlywood;
+    }
+    90% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: chocolate;
+    }
+
+}
+@keyframes agrandar {
+    0% {
+        width: 200px;
+        height: 200px;
+    }
+    50% {
+        width: 400px;
+        height: 400px;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes moverX {
+    0% {
+        transform: translateX(-650px);
+    }
+
+    20% {
+        transform: translateX(0px);
+    }
+
+    60% {
+        transform: translateX(650px);
+    }
+    80% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-650px);
+    }
+}

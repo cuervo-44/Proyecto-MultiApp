@@ -1,0 +1,14 @@
+<div class="card" [style.background]="getBackgroundColor()" (click)="mostrarFicha()">
+
+  <img [src]="personaje.imagen" alt="{{personaje.nombre}}">
+
+  <h2>{{ personaje.nombre }}</h2>
+
+  <p><strong>Raza:</strong> {{ personaje.raza }}</p>
+
+  <p>
+    <strong>Poder:</strong>
+    <span class="estrellas">{{ getStars(personaje.poder) }}</span>
+  </p>
+
+</div>

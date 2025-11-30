@@ -1,0 +1,7 @@
+<div class="general">
+  <div class="grid">
+    @for (p of personajes; track p.nombre) {
+      <app-ficha-personaje [personaje]="p"></app-ficha-personaje>
+    }
+  </div>
+</div>

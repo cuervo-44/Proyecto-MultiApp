@@ -1,0 +1,24 @@
+<div class="general">
+   <div class="semaforo">
+      @if (numero <= 2) {
+      <div class="circulo red"></div>
+      } @else {
+      <div class="circulo black"></div>
+      }
+      @if (numero > 2 && numero <= 5) {
+      <div class="circulo amber"></div>
+      } @else {
+      <div class="circulo black"></div>
+      }
+      @if (numero > 5) {
+      <div class="circulo green"></div>
+      } @else {
+      <div class="circulo black"></div>
+   }   
+   </div>
+
+   <p class="puntos">{{numero}}</p>
+   <button (click)="sumar()">+1</button>
+   <button (click)="restar()">-1</button>
+   <button (click)="reset()">reset</button>
+</div>

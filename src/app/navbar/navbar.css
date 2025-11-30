@@ -1,0 +1,27 @@
+.fondo {
+  background-color: rgba(255, 250, 250, 0.7);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+}
+
+.opcion {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .opcion2 {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .opcion1 {
+    display: none;
+  }
+}

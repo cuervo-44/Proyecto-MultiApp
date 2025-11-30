@@ -1,0 +1,51 @@
+<div>
+  <div cdkDropListGroup class = "general">
+    <div class="example-container todo">
+      <h2>To do</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        @for (item of todo; track item) {
+          <div class="example-box todo" cdkDrag (click)="mostrarDescripcion(item)">
+            <b>{{ item.titulo }}</b><br />
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class=" example-container doing">
+      <h2>Doing</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="doing"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        @for (item of doing; track item) {
+        <div class="example-box doing" cdkDrag (click)="mostrarDescripcion(item)">
+          <b>{{ item.titulo }}</b><br />
+        </div>
+        }
+      </div>
+    
+    </div>
+
+    <div class="example-container done">
+      <h2>Done</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        @for (item of done; track item) {
+          <div class="example-box done" cdkDrag (click)="mostrarDescripcion(item)">
+            <b>{{ item.titulo }}</b><br />
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
