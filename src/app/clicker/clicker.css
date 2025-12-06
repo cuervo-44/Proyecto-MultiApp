@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.coin {
+  width: 150px;
+  cursor: pointer;
+}
+
+.upgrade {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 6px;
+}
+
+.boost {
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+}
+
+.boosted {
+  background-color: rgb(255, 240, 180);
+}

@@ -1,0 +1,32 @@
+<div class="container" [class.boosted]="service.boostActive">
+    <h1>{{ formatNumber(service.puntos) }}</h1>
+    <p>{{ formatNumber(service.puntosPorSegundo) }} / s</p>
+
+    <img src="images/boton.png"
+        class = "coin" (click)="service.clickPuntos()">
+    
+    <h2>MEJORAS</h2>
+
+    <div class="upgrade"
+        *ngFor="let u of service.mejoras; let i = index">
+    
+        <h3>{{u.nombre}}</h3>
+        <p>Compradas: {{u.contador}}</p>
+        <p>+{{u.produccion}} / s</p>
+
+        <button (click)="service.comprarMejora(i)">
+            Comprar ({{formatNumber(service.getCoste(u))}})
+        </button>   
+    </div>    
+    @if (showBoost == true) {
+        <img 
+        src="images/lenny.png"
+        class="boost"
+        [style.top]="boostY + 'vh'"
+        [style.left]="boostX + 'vw'"
+        (click)="activarBoost()"
+        >
+    }
+  <button (click)="service.reset()">Reiniciar partida</button>
+
+</div>

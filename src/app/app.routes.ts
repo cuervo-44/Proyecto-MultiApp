@@ -6,6 +6,7 @@ import { EyeCandy } from './eye-candy/eye-candy';
 import { Carrera } from './carrera/carrera';
 import { ListaPersonajes } from './Personajes/lista-personajes/lista-personajes';
 import { Formulario } from './formulario/formulario';
+import { Clicker } from './clicker/clicker';
 
 export const routes: Routes = [
     { path: 'contador', component: Contador},
@@ -14,7 +15,8 @@ export const routes: Routes = [
     { path: 'eye-candy', component: EyeCandy},
     { path: 'carrera', component: Carrera},
     { path: 'Personajes/lista-personajes', component: ListaPersonajes},
-    { path: 'formulario', component: Formulario}
+    { path: 'formulario', component: Formulario},
+    { path: 'clicker', component: Clicker}
 ];
 
 
