@@ -1,3 +1,6 @@
+//Hola Fonsi, la mayor parte del código de este componente está hecha con IA, te agradecería que no me puntuases
+//este apartado, co que lo hicieses como un 0
+
 import { Component } from '@angular/core';
 import { ClickerService } from '../Services/clicker-service';
 import { CommonModule } from '@angular/common';

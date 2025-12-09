@@ -1,3 +1,6 @@
+//Hola Fonsi, la mayor parte del código de este componente está hecha con IA, te agradecería que no me puntuases
+//este apartado, o que lo hicieses como un 0
+
 import { Component, OnInit } from '@angular/core';
 import { FichaPersonaje } from '../ficha-personaje/ficha-personaje';
 
