@@ -1,4 +1,4 @@
-<div class="container" [class.boosted]="service.boostActive">
+<div class="container" [ngClass]="{'boosted': service.boostActive}">
     <h1>{{ formatNumber(service.puntos) }}</h1>
     <p>{{ formatNumber(service.puntosPorSegundo) }} / s</p>
 
