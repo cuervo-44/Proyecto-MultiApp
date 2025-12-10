@@ -17,8 +17,9 @@ export class Clicker {
   boostY = 0;
 
   constructor(public service: ClickerService) {
+    //Esto hace que la funcion spawnBoost se relice en un intervalo de 6 a 12 segundos
     setInterval(() => {this.spawnBoost();},
-    6000 + Math.random() * 6000);
+    6000 + Math.random() * 6000);//6000ms + un número aleatorio entre 0 y6000 ms
   }
 
   spawnBoost() {
